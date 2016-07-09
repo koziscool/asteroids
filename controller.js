@@ -3,7 +3,6 @@ var controller = {
 
   init: function() {
     view.clearCanvas();
-    ship.randomStartInfo();
     view.drawShip( ship );
     controller.generateAsteroids(4);
   },
