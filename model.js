@@ -16,18 +16,16 @@ var asteroid = {
     this.updatePosition =function() {
       this.locationX += this.velX;
       // funky formula to handle neg and pos velocities plus javascript modulus bug
-      this.locationX = ((this.locationX % space.width) + space.width) % space.width
+      this.locationX = ((this.locationX % space.width) + space.width) % space.width;
       this.locationY += this.velY;
-      this.locationY = ((this.locationY % space.height) + space.height) % space.height
+      this.locationY = ((this.locationY % space.height) + space.height) % space.height;
     };
 
   },
 
   randAsteroid: function() {
-
     var randX = Math.random() * space.width + 1;
     var randY = Math.random() * space.height+ 1;
-
     var randVX =  2 * Math.random() * space.MAX_VELOCITY - space.MAX_VELOCITY;
     var randVY =  2 * Math.random() * space.MAX_VELOCITY - space.MAX_VELOCITY;
 
@@ -64,10 +62,13 @@ var ship = {
 
   updatePosition: function() {
     this.locationX += this.velX;
+    console.log( "update");
+    // console.log( this.velX );
+    // console.log( this.locationX );
     // funky formula to handle neg and pos velocities plus javascript modulus bug
-    this.locationX = ((this.locationX % space.width) + space.width) % space.width
+    this.locationX = ((this.locationX % space.width) + space.width) % space.width;
     this.locationY += this.velY;
-    this.locationX = ((this.locationY % space.height) + space.height) % space.height
+    this.locationY = ((this.locationY % space.height) + space.height) % space.height;
   },
 
   headPoint: function() {
@@ -110,7 +111,6 @@ var ship = {
 
     space.asteroids.push(bullet);
   }
-
 };
 
 

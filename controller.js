@@ -19,28 +19,29 @@ var controller = {
 
   setThrust: function(){
     if(controller.direction === "up"){
+      // console.log( ship.direction );
+      console.log("thrust")
+      console.log( ship.velX );
       ship.velX += 1 * Math.cos(ship.direction) / 2;
       ship.velY += 1 * Math.sin(ship.direction) / 2;
-    }else if (controller.direction === "down"){
-      ship.velX -= 1 * Math.cos(ship.direction) / 2;
-      ship.velY -= 1 * Math.sin(ship.direction) / 2;
     }
   },
 
   setDirection: function(  ) {
     if(controller.direction === "right"){
+      console.log( ship.direction );
       ship.direction += 1/20 * Math.PI;
       view.drawShip( ship );
     }else if (controller.direction === "left"){
       ship.direction -= 1/20 * Math.PI;
     }
   },
+
   controlShipFire: function() {
     if(controller.fire === true){
       ship.fire();
       controller.fire = false;
     }
-
   },
 
   splitAsteroid: function(ast, index){
