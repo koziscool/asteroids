@@ -61,7 +61,7 @@ var controller = {
   },
 
   gameLoop: function() {
-    // view.clearCanvas();
+    view.clearCanvas();
     view.drawShip( ship );
     controller.setDirection();
     controller.setThrust();
