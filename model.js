@@ -30,7 +30,7 @@ var asteroid = {
 
     var randVX =  2 * Math.random() * space.MAX_VELOCITY - space.MAX_VELOCITY;
     var randVY =  2 * Math.random() * space.MAX_VELOCITY - space.MAX_VELOCITY;
-    return new asteroid.Constructor();
+    return new asteroid.Constructor( randX, randY, randVX, randVY, 50, 50 );
   },
 
 

@@ -56,6 +56,7 @@ var controller = {
         controller.splitAsteroid(ast, index);
       }
       ast.updatePosition();
+
       view.drawAsteroid(ast);
     });
   },
