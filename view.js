@@ -54,5 +54,13 @@ var view = {
 
   },
 
+  clearCanvas:function() {
+
+  },
+
+  drawShip: function( ship ){
+
+
+  },
 
 }

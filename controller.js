@@ -2,7 +2,17 @@
 var controller = {
 
   init: function() {
-    
+    view.clearCanvas();
+    ship.randomStartInfo();
+    view.drawShip( ship );
+    controller.generateAsteroids(4);
+  },
+
+  generateAsteroids: function( numAsteroids ) {
+    for( var i = 0; i < numAsteroids; i++ ) {
+      space.asteroids.push( asteroid.randAsteroid() )
+    }
+
   },
 
   gameLoop: function() {
@@ -14,7 +24,7 @@ var controller = {
     // controller.updateAsteroidPos();
     // ship.updatePosition();
     // asteroid.collision();
-  }
+  },
 
   game:function() {
     setInterval(controller.gameLoop, 20);
