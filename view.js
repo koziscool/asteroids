@@ -54,6 +54,15 @@ var view = {
 
   },
 
+  drawAsteroid: function(asteroid){
+    var c=document.getElementById("canvas");
+    var ctx=c.getContext("2d");
+    ctx.fillStyle="#FFFFFF";
+    ctx.strokeStyle="#FFFFFF";
+    ctx.rect(asteroid.locationX, asteroid.locationY, asteroid.width, asteroid.height);
+    ctx.stroke();
+  },
+
   clearCanvas:function() {
 
   },
@@ -67,6 +76,7 @@ var view = {
 
       // Draw triangle
       ctx.fillStyle="#A2322E";
+      ctx.strokeStyle="#FFFFFF";
       ctx.beginPath();
       // Draw a triangle location for each corner from x:y 100,110 -> 200,10 -> 300,110 (it will return to first point)
       ctx.moveTo( ship.rearPoint1().x, ship.rearPoint1().y );
