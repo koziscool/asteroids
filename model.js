@@ -115,6 +115,10 @@ var ship = {
 
 
 var space = {
+
+  // refactor a few things to put some things here, ie like collisions and 
+  // part of the asteroid obj functionality.
+
   asteroids: [],
 
   MAX_VELOCITY: 1.8,
