@@ -18,7 +18,7 @@ var asteroid = {
       // funky formula to handle neg and pos velocities plus javascript modulus bug
       this.locationX = ((this.locationX % space.width) + space.width) % space.width
       this.locationY += this.velY;
-      this.locationX = ((this.locationY % space.height) + space.height) % space.height
+      this.locationY = ((this.locationY % space.height) + space.height) % space.height
     };
 
   },
@@ -30,6 +30,7 @@ var asteroid = {
 
     var randVX =  2 * Math.random() * space.MAX_VELOCITY - space.MAX_VELOCITY;
     var randVY =  2 * Math.random() * space.MAX_VELOCITY - space.MAX_VELOCITY;
+
     return new asteroid.Constructor( randX, randY, randVX, randVY, 50, 50 );
   },
 

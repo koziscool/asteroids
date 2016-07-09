@@ -7,7 +7,7 @@ var controller = {
   init: function() {
     view.clearCanvas();
     view.drawShip( ship );
-    controller.generateAsteroids(4);
+    controller.generateAsteroids( 4);
   },
 
   generateAsteroids: function( numAsteroids ) {
